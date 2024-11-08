@@ -1,0 +1,317 @@
+/* global styling */
+:root{
+    --main-color: #E69178;
+    --main-color-rgb:233 ,97 ,120;
+    --secondary-color:#AAAAAA;
+    scroll-padding: 48px;
+}
+.main-color{
+    color:var(--main-color) !important;
+}
+.main-bg-color {
+  background-color:var(--main-color) !important;
+}
+
+
+body{
+    font-family: "Nunito", sans-serif;}
+    h1,h2,h3,h4,h5,h6{
+        font-family: "Montserrat", sans-serif;
+    }
+
+
+
+body {
+    background-color: green;
+}
+
+.section-heading i{
+    color: var(--main-color);
+}
+
+/* main styling */
+/* Start Header */
+
+header {
+ background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../images/header-bg.jpg");
+ background-position: center;
+ background-size: cover;
+
+}
+.header ::content {
+    color: #fff;
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+}
+
+h1::after{
+    content: "";
+    animation: 4s typing infinite;
+}
+
+@keyframes typing {
+
+    0% {content: "|";}
+    3% {content: "D|";}
+    5% {content: "De|";}
+    7% {content: "Dev|";}
+    10% {content: "Deve|";}
+    13% {content: "Devel|";}
+    15% {content: "Develo|";}
+    17% {content: "Develop|";}
+    20% {content: "Developm|";}
+    24% {content: "Developme|";}
+    25% {content: "Developmen|";}
+    27% {content: "Development|";}
+    30% {content: "Development|";}
+    32% {content: "Developmen|";}
+    35% {content: "Developme|";}
+    37% {content: "Develop|";}
+    40% {content: "Develo|";}
+    42% {content: "Devel|";}
+    45% {content: "Deve|";}
+    47% {content: "Dev|";}
+    50% {content: "De|";}
+    52% {content: "Des|";}
+    55% {content: "Desi|";}
+    57% {content: "Desig|";}
+    60% {content: "Design|";}
+    62% {content: "Designe|";}
+    65% {content: "Designer|";}
+    67% {content: "Designer|";}
+    70% {content: "Designe|";}
+    72% {content: "Design|";}
+    75% {content: "Desig|";}
+    77% {content: "Desi|";}
+    80% {content: "Des|";}
+    82% {content: "De|";}
+    85% {content: "Dev|";}
+    87% {content: "Deve|";}
+    90% {content: "Devel|";}
+    92% {content: "Develo|";}
+    95% {content: "Develop|";}
+    97% {content: "Develope|";}
+    100% {content: "Developer|";}
+  }
+
+  .scroll-btn{
+    width: 25px;
+    height: 40px;
+    border: solid 2px #fff;
+    transform: translateY(-50px);
+    animation: scroll-down 2s infinite;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 30px;
+    left: 49%;
+    transform: translateX(-50%);
+
+  }
+  .scroll-btn::after {
+    content: "";
+    background-color: #fff;
+    display: block;
+    width: 2px;
+    position: absolute;
+    height:20%;
+    bottom: 5px;
+    left: 50%;
+    transform: transalteX(-50%);
+
+  }
+  @keyframes scroll-down {
+    0%{
+
+        transform: translateY(-50px);
+    }
+
+    35%{
+
+        transform: translateY(-80px);
+    }
+    50%{
+
+        transform: translateY(-50px);
+    }
+    80%{
+
+        transform: translateY(-60px);
+    }
+
+    100%{
+
+        transform: translateY(-50px);
+    }
+
+  }
+
+  .header-icon{
+    width: 50px;
+    height: 50px;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+
+  }
+  /* navbar */
+  .nav-link.active{
+
+    color: var(--main-color) !important;
+
+  }
+
+
+
+  /* About */
+
+  .About-icons i{
+    border: solid 2px var(--secondary-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+  .About-icons i:hover{
+    border: solid 2px var(--main-color);
+    color: var(--main-color) !important;
+
+
+    
+  }
+
+  /* client */
+  #client .carousel i {
+    color: var(--main-color);
+  }
+  #client .carousel img {
+    width: 100px;
+    height: 100px;
+    
+  }
+  #client .carousel-indicators button {
+    background-color: var(--main-color);
+    border-radius: 8px;
+    border: none;
+    height: 4px;
+    width: 10px;
+    transition: 0.5s width;
+
+  }
+  #client .carousel-indicators button.active {
+    width: 20px !important;
+  }
+
+/* End Header */
+
+/* our works start */
+
+#Portfolio .col .work-card .overlay {
+  background-color: black;
+  opacity: 0;
+  transition: opacity 0.5s;
+  cursor: pointer;
+  
+}
+  
+#Portfolio .col .work-card:hover .overlay {
+    opacity: 0.8;
+    
+}
+#Portfolio .col .work-card img {
+transition: 0.5s;
+}
+#Portfolio .col .work-card:hover img {
+    scale: 1.2;
+}
+#Portfolio .col .work-card .Title {
+    top: 100%;
+    left: 50%;
+    transition: 0.5s;
+    transform: translate(-50%);
+    color: #fff;
+}
+#Portfolio .col .work-card:hover .Title {
+    top: 50%;
+    left: 50%;
+}
+
+.nav-pills .nav-link.active {
+ background-color: var(--main-color) !important;
+ color: #fff !important;
+}
+
+.nav-pills .nav-link:hover {
+  --bs-nav-link-hover-color: #fff;
+  background-color: var(--main-color);
+}
+/* our works end */
+
+/* services start */
+
+.services .col .card-line::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3px;
+  width: 40px;
+  background-color: var(--main-color);
+  transition: 0.5s width;
+}
+.services .col .content:hover h4::after{
+  width: 60px;
+}
+.services button {
+  background-color: var(--main-color) !important;
+}
+  
+
+/* services end */
+
+input:focus , textarea:focus {
+  border-color: var(--main-color) !important;
+}
+
+footer .fa-circle {
+  color: rgb(241, 241, 241  0.08);
+
+}
+
+footer span i:nth-child(2) {
+  transition: color 0.4s;
+}
+footer span:hover i:nth-child(2) {
+  color: var(--main-color) !important;
+  cursor: pointer;
+}
+
+/* finished */
+
+.scroll-up-btn{
+  background-color: var(--main-color) !important;
+  width: 30px;
+  height: 30px;
+  bottom: 20px !important;
+  right: 20px !important;
+  border-radius: 6px;
+  animation: shown 1s;
+  animation-timeline: view();
+  animation-range: 10% 20%;
+  animation-fill-mode: both;
+}
+@keyframes shown {
+
+  from{
+    opacity: 0;
+  }
+
+  to{
+    opacity: 1;
+  }
+}
